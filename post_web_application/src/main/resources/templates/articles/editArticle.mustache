@@ -12,6 +12,7 @@
             <div class="post-content m-auto">
                 <p>create or edit post</p>
                 <form action="/articles/update" method="post" class="mt-4">
+                    <input type="hidden" name="id" value="{{article.id}}">
                     <div class="mb-3">
                         <label for="article-title" class="form-label">제목</label>
                         <input type="text" class="form-control" id="article-title" name="title" value="{{title}}">

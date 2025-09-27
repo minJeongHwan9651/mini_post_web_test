@@ -1,0 +1,37 @@
+{{>fragments/header}}
+<!-- =========== Main Container ============= -->
+{{#article}}
+<div class="main-content-area">
+    <div class="container">
+        <div class="single-post-wrap page-wrap">
+            <div class="post-head d-flex">
+                <div class="header-inner align-self-center">
+                    <h1 class="title">GET IN TOUCH</h1>
+                </div>
+            </div>
+            <div class="post-content m-auto">
+                <p>create or edit post</p>
+                <form action="/articles/update" method="post" class="mt-4">
+                    <div class="mb-3">
+                        <label for="article-title" class="form-label">제목</label>
+                        <input type="text" class="form-control" id="article-title" name="title" value="{{title}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="article-author" class="form-label">작성자</label>
+                        <input type="text" class="form-control" id="article-author" name="author" value="{{author}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="article-content" class="form-label">내용</label>
+                        <textarea class="form-control" id="article-content" name="content" rows="5">{{content}}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">수정 완료</button>
+                    <a href="/articles" class="btn btn-secondary">취소</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{/article}}
+<!-- =========== End Main Container ============= -->
+<!-- =========== Footer ============= -->
+{{>fragments/footer}}
